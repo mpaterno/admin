@@ -24,7 +24,7 @@
     <button
       class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
       type="button"
-      on:click={() => toggleCollapseShow('bg-white m-2 py-3 px-6')}
+      on:click={() => toggleCollapseShow("bg-white m-2 py-3 px-6")}
     >
       <i class="fas fa-bars"></i>
     </button>
@@ -67,7 +67,7 @@
             <button
               type="button"
               class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-              on:click={() => toggleCollapseShow('hidden')}
+              on:click={() => toggleCollapseShow("hidden")}
             >
               <i class="fas fa-times"></i>
             </button>
@@ -91,6 +91,37 @@
       <h6
         class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
       >
+        My Features
+      </h6>
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+        <li class="items-center">
+          <a
+            use:link
+            href="/admin/upload"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf(
+              '/admin/upload',
+            ) !== -1
+              ? 'text-red-500 hover:text-red-600'
+              : 'text-blueGray-700 hover:text-blueGray-500'}"
+          >
+            <i
+              class="fas fa-tv mr-2 text-sm {location.href.indexOf(
+                '/admin/upload',
+              ) !== -1
+                ? 'opacity-75'
+                : 'text-blueGray-300'}"
+            ></i>
+            Upload
+          </a>
+        </li>
+      </ul>
+
+      <!-- Divider -->
+      <hr class="my-4 md:min-w-full" />
+      <!-- Heading -->
+      <h6
+        class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+      >
         Admin Layout Pages
       </h6>
       <!-- Navigation -->
@@ -100,10 +131,18 @@
           <a
             use:link
             href="/admin/dashboard"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/dashboard') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf(
+              '/admin/dashboard',
+            ) !== -1
+              ? 'text-red-500 hover:text-red-600'
+              : 'text-blueGray-700 hover:text-blueGray-500'}"
           >
             <i
-              class="fas fa-tv mr-2 text-sm {location.href.indexOf('/admin/dashboard') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
+              class="fas fa-tv mr-2 text-sm {location.href.indexOf(
+                '/admin/dashboard',
+              ) !== -1
+                ? 'opacity-75'
+                : 'text-blueGray-300'}"
             ></i>
             Dashboard
           </a>
@@ -113,10 +152,18 @@
           <a
             use:link
             href="/admin/settings"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/settings') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf(
+              '/admin/settings',
+            ) !== -1
+              ? 'text-red-500 hover:text-red-600'
+              : 'text-blueGray-700 hover:text-blueGray-500'}"
           >
             <i
-              class="fas fa-tools mr-2 text-sm {location.href.indexOf('/admin/settings') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
+              class="fas fa-tools mr-2 text-sm {location.href.indexOf(
+                '/admin/settings',
+              ) !== -1
+                ? 'opacity-75'
+                : 'text-blueGray-300'}"
             ></i>
             Settings
           </a>
@@ -126,10 +173,18 @@
           <a
             use:link
             href="/admin/tables"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/tables') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf(
+              '/admin/tables',
+            ) !== -1
+              ? 'text-red-500 hover:text-red-600'
+              : 'text-blueGray-700 hover:text-blueGray-500'}"
           >
             <i
-              class="fas fa-table mr-2 text-sm {location.href.indexOf('/admin/tables') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
+              class="fas fa-table mr-2 text-sm {location.href.indexOf(
+                '/admin/tables',
+              ) !== -1
+                ? 'opacity-75'
+                : 'text-blueGray-300'}"
             ></i>
             Tables
           </a>
@@ -139,10 +194,18 @@
           <a
             use:link
             href="/admin/maps"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/maps') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf(
+              '/admin/maps',
+            ) !== -1
+              ? 'text-red-500 hover:text-red-600'
+              : 'text-blueGray-700 hover:text-blueGray-500'}"
           >
             <i
-              class="fas fa-map-marked mr-2 text-sm {location.href.indexOf('/admin/maps') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
+              class="fas fa-map-marked mr-2 text-sm {location.href.indexOf(
+                '/admin/maps',
+              ) !== -1
+                ? 'opacity-75'
+                : 'text-blueGray-300'}"
             ></i>
             Maps
           </a>
@@ -314,7 +377,6 @@
             VueJS
           </a>
         </li>
-
       </ul>
     </div>
   </div>

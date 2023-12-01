@@ -12,22 +12,24 @@
   import Settings from "views/admin/Settings.svelte";
   import Tables from "views/admin/Tables.svelte";
   import Maps from "views/admin/Maps.svelte";
+  import Upload from "views/admin/Upload.svelte";
 
   export let location;
   export let admin = "";
 </script>
 
 <div>
-  <Sidebar location={location}/>
+  <Sidebar {location} />
   <div class="relative md:ml-64 bg-blueGray-100">
     <AdminNavbar />
     <HeaderStats />
     <div class="px-4 md:px-10 mx-auto w-full -m-24">
       <Router url="admin">
-        <Route path="dashboard" component="{Dashboard}" />
-        <Route path="settings" component="{Settings}" />
-        <Route path="tables" component="{Tables}" />
-        <Route path="maps" component="{Maps}" />
+        <Route path="dashboard" component={Dashboard} />
+        <Route path="settings" component={Settings} />
+        <Route path="tables" component={Tables} />
+        <Route path="maps" component={Maps} />
+        <Route path="upload" component={Upload} />
       </Router>
       <FooterAdmin />
     </div>
